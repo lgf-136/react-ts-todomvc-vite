@@ -1,6 +1,6 @@
 import TodoHeader from './TodoHeader';
 import TodoFooter from './TodoFooter';
-import TodoMain from './TodoMain';
+import TodoList from './TodoList';
 import { observer } from 'mobx-react-lite';
 import useStore from '../../store';
 
@@ -11,14 +11,7 @@ function TodoListView() {
   return (
     <section className="todoapp">
       <TodoHeader />
-      <section className="main">
-        <input className="toggle-all" type="checkbox" />
-        <ul className="todo-list">
-          {todoListStore.filterTodos.map((todo) => (
-            <TodoMain key={todo.id} todo={todo} />
-          ))}
-        </ul>
-      </section>
+      <TodoList />
       <TodoFooter />
     </section>
   );

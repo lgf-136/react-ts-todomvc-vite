@@ -1,11 +1,7 @@
 import { observer } from 'mobx-react-lite';
 import useStore from '../../../store';
-import { ITodo } from '../../../store/todos/todoListStore';
-import TodoStore from '../../../store/todos/todoStore';
 
-import './index.css';
-
-function TodoMain({ todo }: any) {
+function TodoItem({ todo }: any) {
   const { todoListStore } = useStore();
   return (
     <li className={todo.completed ? 'completed' : ''}>
@@ -27,4 +23,4 @@ function TodoMain({ todo }: any) {
   );
 }
 
-export default observer(TodoMain);
+export default observer(TodoItem);
