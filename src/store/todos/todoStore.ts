@@ -4,8 +4,8 @@ import { makeObservable, observable, action } from 'mobx';
 //   new Date().getTime();
 // };
 class TodoStore {
-  // id = Math.random();
-  id = new Date().getTime();
+  id = Math.random();
+  // id = new Date().getTime();  //Encountered two children with the same key, `1663594676411`
   title = '';
   completed = false;
   constructor(title: string) {

@@ -17,7 +17,7 @@ export interface ITodo {
 }
 
 class TodoListStore {
-  todos: TodoStore[] =[];
+  todos: TodoStore[] = [];
   filter = 'all';
   constructor(todos: TodoStore[]) {
     if (todos) this.todos = todos;
@@ -64,7 +64,7 @@ class TodoListStore {
   }
   async loadTodos() {
     let todos = await axios
-      .get('http://localhost:3005/todos')
+      .get('http://localhost:3000/todos')
       .then((response) => response.data);
     runInAction(() => {
       todos.forEach((todo: ITodo) => {
