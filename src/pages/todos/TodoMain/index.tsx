@@ -3,9 +3,9 @@ import useStore from '../../../store';
 import { ITodo } from '../../../store/todos/todoListStore';
 import TodoStore from '../../../store/todos/todoStore';
 
-// import './index.module.css';
+import './index.module.css';
 
-function TodoMain({ todo }: TodoStore) {
+function TodoMain({ todo }: any) {
   const { todoListStore } = useStore();
   console.log(todo);
   console.log(todo.title);
