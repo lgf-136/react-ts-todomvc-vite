@@ -1,13 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from 'react';
+import { Provider as MobxProvider } from 'mobx-react';
+import reactLogo from './assets/react.svg';
+import './App.css';
+import useStore, { stores, context } from './store';
+import Todos from './pages/todos';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const { todoListStore } = useStore();
 
   return (
-    <div className="App">
-      <div>
+    // <MobxProvider {...stores}>  // 由于 在需要的模块直接使用 useStore即可，无需外包 Provider
+    <>
+      {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
@@ -26,9 +31,11 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+      </p> */}
+      <Todos />
+    </>
+    // </MobxProvider>
+  );
 }
 
-export default App
+export default App;
