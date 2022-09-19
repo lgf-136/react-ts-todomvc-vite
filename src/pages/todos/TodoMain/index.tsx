@@ -3,12 +3,10 @@ import useStore from '../../../store';
 import { ITodo } from '../../../store/todos/todoListStore';
 import TodoStore from '../../../store/todos/todoStore';
 
-import './index.module.css';
+import './index.css';
 
 function TodoMain({ todo }: any) {
   const { todoListStore } = useStore();
-  console.log(todo);
-  console.log(todo.title);
   return (
     <li className={todo.completed ? 'completed' : ''}>
       <div className="view">

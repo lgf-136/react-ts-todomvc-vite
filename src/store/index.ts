@@ -8,9 +8,9 @@ class RootStore {
 }
 
 export const stores = new RootStore();
-// console.log(rootStore);
+
 export const context = createContext(stores);
-// console.log(useStore);
+
 
 const useStore = () => {
   return useContext(context);

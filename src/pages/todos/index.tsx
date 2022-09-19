@@ -4,11 +4,10 @@ import TodoMain from './TodoMain';
 import { observer } from 'mobx-react-lite';
 import useStore from '../../store';
 
-// import './index.module.css';
+import './index.css';
 
 function TodoListView() {
   const { todoListStore } = useStore();
-  console.log(todoListStore.filterTodos);
   return (
     <section className="todoapp">
       <TodoHeader />

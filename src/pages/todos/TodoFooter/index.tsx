@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react-lite';
 import useStore from '../../../store';
 
-import './index.module.css'
+import './index.css'
 
 function TodoFooter() {
   const { todoListStore } = useStore();
